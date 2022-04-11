@@ -5,88 +5,19 @@ let cardsFlipped = 0;
 let noClicking = false;
 
 
-const COLORS = [
-  {
-    id: 1,
-    name: 'javascript',
-    img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/js-logo.png'
-  },
-  {
-    id: 2,
-    name: 'css3',
-    img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/css3-logo.png'
-  },
-  {
-    id: 3,
-    name: 'html5',
-    img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/html5-logo.png'
-  },
-  {
-    id: 4,
-    name: 'safari',
-    img:
-      'https://res.cloudinary.com/henryzarza/image/upload/v1601735663/General%20assets/safari_mw13q8.png'
-  },
-  {
-    id: 5,
-    name: 'rails',
-    img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/rails-logo.png'
-  },
-  {
-    id: 6,
-    name: 'node',
-    img: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/nodejs-logo.png'
-  },
-  {
-    id: 7,
-    name: 'react',
-    img:
-      'https://res.cloudinary.com/henryzarza/image/upload/v1601735662/General%20assets/react_m1pmwj.png'
-  },
-  {
-    id: 8,
-    name: 'angular',
-    img:
-      'https://res.cloudinary.com/henryzarza/image/upload/v1601735662/General%20assets/angular_qqblks.png'
-  },
-  {
-    id: 9,
-    name: 'vuejs',
-    img:
-      'https://res.cloudinary.com/henryzarza/image/upload/v1601735662/General%20assets/vue_ctikzd.png'
-  },
-  {
-    id: 10,
-    name: 'svelte',
-    img:
-      'https://res.cloudinary.com/henryzarza/image/upload/v1601735662/General%20assets/svelte_keupr5.png'
-  },
-  {
-    id: 11,
-    name: 'chrome',
-    img:
-      'https://res.cloudinary.com/henryzarza/image/upload/v1601735663/General%20assets/chrome_lr919s.png'
-  },
-  {
-    id: 12,
-    name: 'mozilla',
-    img:
-      'https://res.cloudinary.com/henryzarza/image/upload/v1601735663/General%20assets/mozilla_us5y7o.png'
-  }
-];
 
-// const COLORS = [
-//   "red", "green", "yellow", 
-//   "blue", "purple",
-//   "green",
-//   "orange",
-//   "purple",
-//   "red",
-//   "blue",
-//   "green",
-//   "orange",
-//   "purple"
-// ];
+const COLORS = [
+  "red", 
+  "blue", 
+  "green",
+  "orange",
+  "purple",
+  "red",
+  "blue",
+  "green",
+  "orange",
+  "purple"
+];
 
 function shuffle(array) {
   let counter = array.length;
@@ -132,6 +63,7 @@ function handleCardClick(e) {
   if (!card1 || !card2) {
     currentCard.classList.add("flipped");
     card1 = card1 || currentCard;
+    //not fully understanding the logic here
     card2 = currentCard === card1 ? null : currentCard;
   }
 
